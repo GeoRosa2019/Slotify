@@ -2,6 +2,8 @@
     // Turns on output buffering; 
     // waits until all data is sent to the server before sending it to the browser
     ob_start();
+    // Starting a session
+    session_start();
 
     // Setting the timezone
     $timezone = date_default_timezone_set("America/Chicago");
