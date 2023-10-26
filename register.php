@@ -23,6 +23,20 @@
         <script src="assets/js/register.js"></script>
     </head>
     <body>
+        <script>
+            $(document).ready(function() {
+                $("#loginForm").hide();
+                $("#registerForm").show();
+                $("#hideLogin").click(function() {
+                    $("#loginForm").show();
+                    $("#registerForm").hide();
+                });
+                $("#hideRegister").click(function() {
+                    $("#loginForm").hide();
+                    $("#registerForm").show();
+                });
+            });
+        </script>
         <div id="background">
             <div id="loginContainer">
                 <div id="inputContainer">
@@ -38,7 +52,7 @@
                             <input id="loginPassword" name="loginPassword" type="password" placeholder="Your Password" required>
                         </p>
                         <button type="submit" name="loginButton">LOG IN</button>
-                        <div id="hasAccountText">
+                        <div class="hasAccountText">
                             <span id="hideLogin">Don't have an account yet? Signup here.</span>
                         </div>
                     </form>
