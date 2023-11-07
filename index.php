@@ -14,8 +14,12 @@ if(isset($_SESSION['userLoggedIn'])) {
 <html>
     <head>
         <title>PHP Test</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
     <body>
-        <?php echo '<p>Hello World</p>'; ?>
+        <div id="nowPlayingBarContainer">
+            <div id="nowPlayingBar"></div>
+
+        </div>
     </body>
 </html>

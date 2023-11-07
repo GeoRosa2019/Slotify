@@ -23,10 +23,27 @@
         <script src="assets/js/register.js"></script>
     </head>
     <body>
+        <?php
+        if(isset($_POST['registerButton'])) {
+            echo '<script>
+                    $(document).ready(function() {
+                        $("#loginForm").hide();
+                        $("#registerForm").show();
+                    });
+                </script>';
+        }
+        else {
+            echo '<script>
+                    $(document).ready(function() {
+                        $("#loginForm").show();
+                        $("#registerForm").hide();
+                    });
+                </script>';
+        }
+
+        ?>
         <script>
             $(document).ready(function() {
-                $("#loginForm").hide();
-                $("#registerForm").show();
                 $("#hideLogin").click(function() {
                     $("#loginForm").show();
                     $("#registerForm").hide();
@@ -45,7 +62,7 @@
                         <p>
                             <?php echo $account->getError(Constants::$loginFailed); ?>
                             <label for="loginUsername">Username</label>
-                            <input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. bartSimpson" required>
+                            <input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. bartSimpson" value='<?php getInputValue('loginUsername') ?>'required>
                         </p>
                         <p>
                             <label for="loginPassword">Password</label>
@@ -91,6 +108,7 @@
                             value="<?php getInputValue('regEmail2'); ?>"required>
                         </p>
                         <p>
+                            <!-- The error messages are displayed here -->
                             <?php echo $account->getError(Constants::$passwordsDoNoMatch); ?>
                             <?php echo $account->getError(Constants::$passwordNotAlphanumeric); ?>
                             <?php echo $account->getError(Constants::$passwordCharacters); ?>
@@ -106,6 +124,17 @@
                             <span id="hideRegister">Already have an account? Log in here.</span>
                         </div>
                     </form>
+                </div>
+                <!-- Writing the right side page -->
+                <div id="loginText">
+                    <h1>Get great music, right now</h1>
+                    <h2>Listen to loads of songs for free</h2>
+                    <!-- ul is unordered list -->
+                    <ul>
+                        <li>Discover music you'll fall in love with</li>
+                        <li>Create your own playlists</li>
+                        <li>Follow artists to keep up to date</li>
+                    </ul>
                 </div>
             </div>
         </div>
