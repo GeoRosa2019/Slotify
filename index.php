@@ -19,6 +19,34 @@ include("includes/config.php");
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
     <body>
+        <div id="mainContainer">
+            <div id="topContainer">
+                <div id="navBarContainer">
+                    <nav class="navBar">
+                        <a href="index.php" class="logo">
+                            <img src="assets/images/icons/logo.png" alt="Logo">
+                        </a>
+                        <div class="group">
+                            <div class="navItem">
+                                <a href="search.php" class="navItemLink">Search
+                                    <img src="assets/images/icons/search.png" class="icon" alt="Search">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="navItem">
+                                <a href="browse.php" class="navItemLink">Browse</a>
+                            </div>
+                            <div class="navItem">
+                                <a href="yourMusic.php" class="navItemLink">Your Music</a>
+                            </div>
+                            <div class="navItem">
+                                <a href="profile.php" class="navItemLink">Profile</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         <div id="nowPlayingBarContainer">
             <div id="nowPlayingBar">
                 <div id="nowPlayingLeft">
@@ -71,11 +99,22 @@ include("includes/config.php");
                     </div>                   
                 </div>
                 <div id="nowPlayingRight">
-                    
+                    <div class="volumeBar">
+                        <button class="controlButton volume" title="Volume button">
+                            <img src="assets/images/icons/volume.png" alt="Volume">
+                        </button>
+                        <div class="progressBar">
+                            <div class="progressBarBg">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
                 </div>
                 
             </div>
 
         </div>
+
+        </div>
+        
     </body>
 </html>
