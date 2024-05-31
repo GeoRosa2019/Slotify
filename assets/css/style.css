@@ -10,6 +10,12 @@ body {
     color: #fff;
 }
 
+body {
+    background-color: #181818;
+    font-size: 14px;
+    min-width: 620px;
+}
+
 #nowPlayingBarContainer {
     width: 100%;
     background-color: #282828;
@@ -29,6 +35,11 @@ body {
 #nowPlayingRight {
     width: 30%;
     min-width: 180px;
+}
+
+#nowPlayingRight {
+    position: relative;
+    margin-top: 16px;
 }
 
 #nowPlayingCenter {
@@ -205,4 +216,14 @@ body {
     right: 0;
     top: 6px;
     width: 25px;
+}
+
+#mainViewContainer {
+    margin-left: 220px;
+    padding-bottom: 90px;
+    width: calc(100% - 220px);
+}
+
+#mainContent {
+    padding: 0 20px;
 }
